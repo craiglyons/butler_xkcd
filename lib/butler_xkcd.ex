@@ -8,7 +8,7 @@ defmodule Butler.XKCD do
   @url "http://xkcd.com/info.0.json"
 
   @usage """
-  marvin xkcd - grab the latest xkcd comic
+  #{name} xkcd - grab the latest xkcd comic
   """
   respond(~r/xkcd/, conn) do
     response = Poison.decode!(HTTPoison.get!(@url).body)
